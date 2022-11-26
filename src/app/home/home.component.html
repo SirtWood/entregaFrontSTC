@@ -1,0 +1,39 @@
+<header>
+    <app-menu></app-menu>
+</header>
+
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <app-formareserva></app-formareserva>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section>
+    <app-ofertahotel></app-ofertahotel>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-3 mt-3 mb-3 p-2 bg-success">
+            <div class="col" *ngFor="let auxiliar of habitaciones">
+                <div class="card h-100 shadow">
+                    <img src={{auxiliar.fotografias[0]}} alt="" class="img-fluid w-100 h-100">
+                    <h1>{{auxiliar.nombre}}</h1>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- <h1 *ngFor="let auxiliar of habitaciones">Hola</h1> -->
+</section>
+
+<footer>
+    <app-footer></app-footer>
+</footer>
